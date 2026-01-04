@@ -10,16 +10,13 @@ This script allows users to select a directory and automatically categorize file
 
 ## Technical Components
 
-* 
-**GUI Integration**: Uses tkinter to provide a native Windows folder selection dialog.
+* **GUI Integration**: Uses tkinter to provide a native Windows folder selection dialog.
 
 
-* 
-**Filesystem Management**: Utilizes pathlib for object-oriented path handling and shutil for high-level file movement.
+* **Filesystem Management**: Utilizes pathlib for object-oriented path handling and shutil for high-level file movement.
 
 
-* 
-**Logging**: Implemented via the datetime library to generate detailed audit trails for every file moved.
+* **Logging**: Implemented via the datetime library to generate detailed audit trails for every file moved.
 
 
 
@@ -29,16 +26,13 @@ This script allows users to select a directory and automatically categorize file
 
 ### A. User Input and Validation
 
-* 
-**tk.Tk() / root.withdraw()**: Initializes the GUI engine while hiding the main window to maintain a clean user interface.
+* **tk.Tk() / root.withdraw()**: Initializes the GUI engine while hiding the main window to maintain a clean user interface.
 
 
-* 
-**filedialog.askdirectory()**: Pauses execution to allow the user to browse and select a target folder.
+* **filedialog.askdirectory()**: Pauses execution to allow the user to browse and select a target folder.
 
 
-* 
-**Safety Check**: Validates the selection; if the user cancels or selects the root script directory (.), the program exits safely to prevent accidental reorganization.
+* **Safety Check**: Validates the selection; if the user cancels or selects the root script directory (.), the program exits safely to prevent accidental reorganization.
 
 
 
@@ -50,35 +44,28 @@ This script allows users to select a directory and automatically categorize file
 
 ### C. File Processing Loop
 
-* 
-**.iterdir()**: Scans the target directory for all items.
+* **.iterdir()**: Scans the target directory for all items.
 
 
-* 
-**is_dir()**: Acts as a safety filter to ensure the script only moves files, skipping existing folders.
+* **is_dir()**: Acts as a safety filter to ensure the script only moves files, skipping existing folders.
 
 
-* 
-**suffix.lower()**: Standardizes file extensions to lowercase to ensure accurate matching regardless of original capitalization.
+* **suffix.lower()**: Standardizes file extensions to lowercase to ensure accurate matching regardless of original capitalization.
 
 
 
 ### D. Logging and Execution
 
-* 
-**Context Manager (with open)**: Opens Organization_log.txt in append mode (a).
+* **Context Manager (with open)**: Opens Organization_log.txt in append mode (a).
 
 
-* 
-**Persistence**: This ensures the log is not deleted every time the script runs; it just keeps adding to the bottom.
+* **Persistence**: This ensures the log is not deleted every time the script runs; it just keeps adding to the bottom.
 
 
-* 
-**strftime("%Y-%m-%d %H:%M:%S")**: Generates a human-readable timestamp for each move.
+* **strftime("%Y-%m-%d %H:%M:%S")**: Generates a human-readable timestamp for each move.
 
 
-* 
-**shutil.move()**: Performs the physical transfer of the file from the source to the appropriate category subfolder.
+* **shutil.move()**: Performs the physical transfer of the file from the source to the appropriate category subfolder.
 
 
 
