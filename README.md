@@ -74,7 +74,7 @@ This script allows users to select a directory and automatically categorize file
 ## Project Structure
 
 ```text
-File_Organizer_Project/
+FileOrganizer/
 ├── organizer.py         # Main Python script
 ├── README.md            # Project documentation
 └── TestEnv/Organization_log.txt # Automatically generated log file
