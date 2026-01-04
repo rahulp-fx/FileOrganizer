@@ -77,6 +77,6 @@ This script allows users to select a directory and automatically categorize file
 File_Organizer_Project/
 ├── organizer.py         # Main Python script
 ├── README.md            # Project documentation
-└── Organization_log.txt # Automatically generated log file
+└── TestEnv/Organization_log.txt # Automatically generated log file
 
 ```
